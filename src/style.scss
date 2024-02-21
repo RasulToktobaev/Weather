@@ -1,0 +1,114 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.search__form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 7%;
+  gap: 30px;
+  &-input{
+    padding: 2px 20px;
+    border: 2px solid darkgoldenrod;
+    border-radius: 10px;
+  }
+  &-btn{
+    padding: 8px 20px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer ;
+    background: antiquewhite;
+    color: red;
+  }
+  &-button{
+    padding: 8px 20px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer ;
+    background: tomato;
+    color: white;
+  }
+}
+
+.title{
+  color: goldenrod;
+  text-align: center;
+  margin-top: 25px;
+  font-size: 30px;
+  font-family: Bahnschrift, sans-serif;
+}
+
+.weather__list{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+  &-item{
+    list-style: none;
+    font-size: 18px;
+    font-family: Tahoma, sans-serif;
+  }
+}
+
+.weather__span{
+  color: red;
+  font-weight: bold;
+}
+.weather__span-two{
+  color: goldenrod;
+font-weight: bold;
+}
+
+.weather__span-three{
+  color: springgreen;
+font-weight: bold;
+}
+
+.weather__span-four{
+  color: aqua;
+  font-weight: bold;
+}
+
+.weather__span-five{
+  color: darkblue;
+  font-weight: bold;
+}
+
+.weather__span-six{
+  color: darkviolet;
+  font-weight: bold;
+}
+
+.weather__span-seven{
+  color: darkgoldenrod;
+  font-weight: bold;
+}
+
+.weather__list-for{
+  display: flex;
+  justify-content: center;
+  column-gap: 40px;
+  margin: 40px 0;
+  list-style-type: none;
+  li{
+    border: 1px solid black;
+    padding: 7px;
+    cursor: pointer;
+  &:hover, &.active{
+    border: 1px solid red;
+  }
+  }
+}
+.dates{
+  display: flex;
+  column-gap: 40px;
+  list-style-type: none;
+  padding-left: 50px;
+  li{
+    padding: 5px;
+    border: 1px solid black;
+  }
+}
