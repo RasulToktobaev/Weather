@@ -6,43 +6,41 @@ import WeatherFor5Days from "./components/WeatherFor5Days/WeatherFor5Days";
 
 function App() {
 
-  const [weather, setWeather] = useState(null)
+    const [weather, setWeather] = useState(null)
 
-  const getWeather = (city) => {
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=658f7544c630f4343c4f4fa0de1f116a`)
-        .then((res) => res.json())
-        .then((res) => {
-          if(res.cod === 200){
-            setWeather(res)
-          }else {
-          alert('Ошибка : Неправильный город')
-          }
-        })
+    const getWeather = (city) => {
+        fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=658f7544c630f4343c4f4fa0de1f116a`)
+            .then((res) => res.json())
+            .then((res) => {
+                if (res.cod === 200) {
+                    setWeather(res)
+                } else {
+                    alert('Ошибка : Неправильный город')
+                }
+            })
 
-  }
+    }
 
-  const clearWeather = () => {
-      setWeather(null)
-  }
-
-
+    const clearWeather = () => {
+        setWeather(null)
+    }
 
 
-  return (
-    <div className="App">
+    return (
+        <div className="App">
 
-    <SearchForm getWeather={getWeather} clearWeather={clearWeather}/>
+            <SearchForm getWeather={getWeather} clearWeather={clearWeather}/>
 
-      {
-        weather && <WeatherData weather={weather}/>
-      }
+            {
+                weather && <WeatherData weather={weather}/>
+            }
 
-      {
-          weather && <WeatherFor5Days weather={weather}/>
-      }
+            {
+                weather && <WeatherFor5Days weather={weather}/>
+            }
 
-    </div>
-  );
+        </div>
+    );
 }
 
 export default App;
