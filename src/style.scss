@@ -8,7 +8,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 7%;
+  margin-top: 2%;
   gap: 30px;
   &-input{
     padding: 2px 20px;
@@ -94,7 +94,8 @@ font-weight: bold;
   margin: 40px 0;
   list-style-type: none;
   li{
-    border: 1px solid black;
+    border: 3px dotted blue;
+    border-radius: 20px;
     padding: 7px;
     cursor: pointer;
   &:hover, &.active{
@@ -106,9 +107,41 @@ font-weight: bold;
   display: flex;
   column-gap: 40px;
   list-style-type: none;
-  padding-left: 50px;
+  padding-left: 20px;
   li{
     padding: 5px;
-    border: 1px solid black;
+    border: 3px dotted gray;
+    border-radius: 15px;
+    cursor: pointer;
+
   }
 }
+.weather__date{
+  font-weight: bold;
+  font-size: 16px;
+  color: indigo;
+  margin-bottom: 5px;
+  font-family: Tahoma, sans-serif;
+}
+
+.weather__temp{
+  color: darkgoldenrod;
+  font-size: 20px;
+  padding-left: 12px;
+}
+
+.weather__icon{
+  padding-left: 10px;
+  font-size: 18px;
+  font-weight: bolder;
+  color: firebrick;
+  font-style: italic;
+}
+
+.weather__time{
+  font-size: 18px;
+  color: teal;
+  margin-bottom: 10px;
+  font-family: Tahoma, sans-serif;
+}
+
